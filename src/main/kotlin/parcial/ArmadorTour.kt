@@ -50,4 +50,7 @@ class Tour(
     fun eliminarPersona(persona: Persona) {
         personasABordo.remove(persona)
     }
+
+    fun codigosDeLugares(): List<Int> = lugaresARecorrer.map { it.codigoAfip }
+    fun dniPersonas(): List<Int> = personasABordo.map { it.dni }
 }

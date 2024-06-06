@@ -1,7 +1,7 @@
 package parcial
 
 //Punto 2
-class Persona(var presupuesto: Double) {
+class Persona(var presupuesto: Double, var email: String, val dni: Int) {
     //Implemento un strategy, lo que me va a permitir cambiar facilmente la preferencia del Usuario
     lateinit var preferenciaVacaciones: PreferenciaVacaciones
 
