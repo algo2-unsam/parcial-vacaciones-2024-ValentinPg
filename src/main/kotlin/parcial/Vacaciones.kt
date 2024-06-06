@@ -1,2 +1,4 @@
+package parcial
+
 class Parcial {
 }
