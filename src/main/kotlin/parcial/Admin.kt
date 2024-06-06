@@ -4,7 +4,7 @@ package parcial
 class Admin {
     //Voy a utilizar el patron observer para defenir las acciones que se van a realizar automaticamente cada vez que el admin confirma un tour
     //De esta forma puedo agregar y quitar acciones cuando quiero
-    val confirmarObservers: MutableList<ConfirmarObserver> = mutableListOf<>()
+    val confirmarObservers: MutableList<ConfirmarObserver> = mutableListOf()
     fun agregarPersonaATour(persona: Persona, tour: Tour) {
         tour.agregarPersona(persona)
     }
