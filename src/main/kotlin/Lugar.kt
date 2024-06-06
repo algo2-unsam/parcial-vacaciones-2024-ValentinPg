@@ -1,5 +1,6 @@
 import java.time.LocalDate
 
+//COmienza punto 1
 //Utilizo una abstract class ya que tiene estado (el nombre)
 abstract class Lugar(val nombre: String) {
     //Utilizo un template method con un metodo que voy a redefinir en cada tipo de lugar
@@ -24,14 +25,22 @@ class Ciudad(nombre: String, var cantidadHabitantes: Int, var cantidadDecibeles:
 
 class Pueblo(nombre: String, val extension: Double, val fechaFundacion: LocalDate, val provincia: String) :
     Lugar(nombre) {
-    override fun condicionLugar(): Boolean = fechaFundacion.year == provincia.length
+        //Lo defino como una constante por si el día de mañana la tengo que cambiar y para que sea mas cohesivo el codigo
+    val FECHA_ANTIGUO = 1800
+    override fun condicionLugar(): Boolean = esAntiguo() || esDelLitoral()
+
+    private fun esAntiguo(): Boolean = fechaFundacion.year < FECHA_ANTIGUO
+
+    private fun esDelLitoral(): Boolean = Litoral.estaIncluida(provincia)
 }
 
 class Balneario(nombre: String, var metrosPlaya: Double, var esMarPeligroso: Boolean, var tienePeatonal: Boolean) :
     Lugar(nombre) {
-    override fun condicionLugar(): Boolean {
-        TODO("Not yet implemented")
-    }
+    //Lo defino como una constante por si el día de mañana la tengo que cambiar y para que sea mas cohesivo el codigo
+    val LONGITUD_PLAYA_LARGA = 300
+    override fun condicionLugar(): Boolean = playaAmplia() && esMarPeligroso
+
+    private fun playaAmplia(): Boolean = metrosPlaya > LONGITUD_PLAYA_LARGA
 }
 
 object Litoral {
@@ -39,4 +48,4 @@ object Litoral {
 
     fun estaIncluida(provincia: String): Boolean = provincias.contains(provincia)
 }
-
+//Finaliza Punto 1
