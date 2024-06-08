@@ -14,6 +14,7 @@ class EnviarMailObs(val mailSender: MailSender) : ConfirmarObserver {
             from = "AdminTours@gmail.com",
             to = casillaDestino,
             subject = "Todo Ready!",
+            // falta hacer un max de la fecha de salida minus 30 con LocalDate.now()
             content = """"fecha de Salida: ${tour.fechaSalida}
                 fecha limite de pago: ${tour.fechaSalida.minusDays(30)}
                 Lugares a visitar: ${tour.lugaresARecorrer.joinToString()}""".trimMargin()

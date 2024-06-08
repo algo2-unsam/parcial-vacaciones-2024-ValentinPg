@@ -8,6 +8,7 @@ abstract class Lugar(val nombre: String, val codigoAfip: Int) {
     //Utilizo un template method con un metodo que voy a redefinir en cada tipo de lugar
     fun esDivertido(): Boolean = nombrePar() && condicionLugar()
 
+    // condicionLugar tiene un nombre genérico que no se asocia a esDivertido()
     abstract fun condicionLugar(): Boolean
 
     private fun nombrePar(): Boolean = (nombre.length % 2) == 0

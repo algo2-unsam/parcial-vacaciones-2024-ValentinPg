@@ -14,6 +14,7 @@ class Admin {
     }
 
     fun confirmarTour(tour: Tour) {
+        // el tour podría quedar confirmado
         confirmarObservers.forEach { it.confirmar(tour) }
     }
 

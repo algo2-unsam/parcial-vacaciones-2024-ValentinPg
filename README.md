@@ -25,3 +25,14 @@ En este caso opté por una clase maestra que sea armado de tours, que implementa
 
 Punto 4:
 A la hora de confirmar decidí implementar un patrón de observers que me va a permitir flexibilidad a la hora de agragar y sacar acciones que se ejecuten a la hora de confirmar. Este caso era ideal para usar observers ya que todas las cosas que tiene que hacer el progrma no tienen un impacto "inmediato"  o directo sobre los tours, por lo que son acciones pasivas que impactan en otras secciones del código
+
+## Corrección
+
+10 (diez), muy buen examen
+
+- Ya veo que es un patrón de todo el grupo, entregar usando varios archivos, lo cual dificulta seriamente la corrección
+- Punto 1: ok
+- Punto 2: ok
+- Punto 3: ok
+- Punto 4: ok
+- Las flechas de asociación del diagrama de clases no son las correctas
